@@ -94,7 +94,7 @@ jobs:
             elif [ "${CURRENT_BRANCH}" == "staging" ]
             then
               aws cloudfront create-invalidation --distribution-id ${STAGING_DISTRIBUTION_ID} --paths /\*
-            else [ "${CURRENT_BRANCH}" == "staging" ]
+            else [ "${CURRENT_BRANCH}" == "develop" ]
             then
               aws cloudfront create-invalidation --distribution-id ${DEV_DISTRIBUTION_ID} --paths /\*
             fi
